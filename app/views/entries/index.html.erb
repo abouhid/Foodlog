@@ -1,15 +1,13 @@
 <% content_for :title do %>
-Foodlog &ndash; <%= DateTime.now %>
+Foodlog &ndash; <%= DateTime.now.to_s(:nice_date) %>
 <% end  %>
-
-<table>
 
     <div class="columns mt-6 is-centered">
 
         <% @entries.each do |entry| %>
         <div class="column is-one-quarters">
             <div class="card">
-                <header class="card-header"> <%= entry.meal_type %></header>
+                <header class="card-header mx-5"> <%= entry.meal_type %></header>
                 <div class="card-content">
                     <div class="content">
 
@@ -31,5 +29,3 @@ Foodlog &ndash; <%= DateTime.now %>
         <% end %>
     </div>
     <br>
-
-    <%= link_to 'New Entry', new_entry_path %>
