@@ -54,3 +54,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "twitter", "~> 7.0"
+
+gem 'bulma-rails', '~> 0.9.0'
